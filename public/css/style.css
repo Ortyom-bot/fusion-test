@@ -1,0 +1,441 @@
+/* Stalinist One; Prosto One */
+@import url("https://fonts.googleapis.com/css2?family=Prosto+One&family=Stalinist+One&display=swap");
+
+body {
+    margin: 0;
+    background-color: #1a1b26;
+}
+
+/* Header Styles */
+
+header {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.header {
+    width: 80vw;
+    height: 2vw;
+    border-radius: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    padding: 10px 20px;
+    color: white;
+}
+
+.logo {
+    font-size: 1.4vw;
+    font-family: "Stalinist One", serif;
+}
+
+.header-nav {
+    display: flex;
+    gap: 1vw;
+    font-family: "Prosto One", serif;
+}
+
+.header-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9vw;
+    transition: color 0.3s ease;
+}
+
+.header-button {
+    font-family: "Prosto One", serif;
+}
+
+.header-nav a:hover {
+    color: #f0a68b;
+}
+
+.header .header-button {
+    background-color: #f68b6f;
+    color: #fff;
+    padding: 0.6vw 1.5vw;
+    border: none;
+    border-radius: 20px;
+    font-size: 0.9vw;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.header-button:hover {
+    background-color: #e67a60;
+}
+
+/* Main Styles */
+
+main {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Main Styles: Section Carousel */
+
+.carousel {
+    position: relative;
+    width: 95vw;
+    height: 22vw;
+    margin-top: 25px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+
+    display: flex;
+    justify-content: center;
+}
+
+.carousel-container {
+    display: flex;
+    width: 200vw;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    position: relative;
+    width: 100%;
+    flex: 0 0 100%;
+    text-align: center;
+}
+
+.carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Main Styles: Section Donate */
+
+.donate {
+    width: 95vw;
+}
+
+.donate-card {
+    margin-top: 25px;
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Main Styles: Section Choose-Serv */
+
+.donate-choose-serv {
+    margin: 10px 10px;
+    width: 33vw;
+    border: #8a8a8a 1px solid;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    background-color: #272838;
+}
+
+.donate-serv {
+    margin: 10px 10px;
+    border: #8a8a8a 1px solid;
+    border-radius: 10px;
+    padding: 0.2vw 0.1vw;
+    width: 14vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1vw;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s, color 0.3s, opacity 0.3s;
+    font-family: "Stalinist One", serif;
+    cursor: pointer;
+    flex: 1;
+}
+
+#serv-one {
+    background-color: rgb(255, 166, 0);
+    color: black;
+}
+
+#serv-two {
+    background-color: rgb(0, 255, 0);
+    color: black;
+}
+
+#serv-three {
+    background-color: rgb(255, 0, 255);
+    color: black;
+}
+
+#serv-four {
+    background-color: rgb(255, 255, 0);
+    color: black;
+}
+
+.active {
+    opacity: 1;
+}
+
+.inactive {
+    opacity: 0.3;
+}
+
+/* Main Styles: Section Choose-Donate */
+
+.donate-choose-don {
+    margin: 10px 10px;
+    width: 33vw;
+    border: #8a8a8a 1px solid;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #272838;
+}
+
+.donate-choose-tab {
+    width: 28vw;
+    height: 1.5vw;
+    border-radius: 30px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    padding: 10px 20px;
+    color: white;
+}
+
+.donate-choose-nav {
+    display: flex;
+    gap: 1.5vw;
+    font-family: "Prosto One", serif;
+    position: relative;
+}
+
+.donate-choose-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1vw;
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+.donate-choose-nav a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0%;
+    height: 3px;
+    background-color: #f0a68b;
+    transition: width 0.3s ease, left 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.donate-choose-nav a[data-active="true"]::after {
+    width: 100%;
+}
+
+.donate-choose-nav a:hover {
+    color: #f0a68b;
+}
+
+.privileges {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5vw;
+    margin-top: 1vw;
+    padding-bottom: 1vw;
+}
+
+.privilege-item {
+    background: linear-gradient(145deg, #232323, #1a1a1a);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    width: 14vw;
+    height: 5vw;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.privilege-item img {
+    width: 3.5vw;
+    height: 100%;
+    margin-right: 1vw;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 2vw;
+}
+
+.privilege-item p {
+    font-family: "Prosto One", serif;
+    font-size: 1vw;
+    font-weight: bold;
+    color: #fff;
+    margin: 0;
+}
+
+.privilege-item span {
+    font-family: "Prosto One", serif;
+    font-size: 0.7vw;
+    color: #b58aff;
+}
+
+.privilege-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
+}
+
+.active2 {
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.5);
+    border: 2px solid #b58aff;
+}
+
+/* Main Styles: Section Donate-Preview */
+
+.donate-prev {
+    margin: 10px;
+    width: 100vw;
+    border: 1px solid #8a8a8a;
+    border-radius: 10px;
+    background-color: #272838;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+
+.donate-preview-content {
+    width: 100%;
+    padding: 20px;
+}
+
+.donate-header {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.donate-header img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.donate-title h2 {
+    font-size: 2vw;
+    margin: 0;
+    color: white;
+    font-family: "Prosto One", serif;
+    font-weight: bold;
+}
+
+.donate-title span {
+    font-size: 1vw;
+    color: #b58aff;
+    font-family: "Prosto One", serif;
+}
+
+.donate-details {
+    text-align: left;
+}
+
+.commands {
+    font-family: "Prosto One", serif;
+}
+
+.commands h3 {
+    font-size: 1.6vw;
+    color: #fff;
+}
+
+.commands ul {
+    list-style: none;
+    padding: 0;
+    font-size: 1vw;
+}
+
+.commands li {
+    margin: 5px 0;
+}
+
+.cmd {
+    color: #b58aff;
+    font-weight: bold;
+}
+
+.cmd-desc {
+    color: #7b7d95;
+}
+
+.regions-prefixes {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.regions h3, .prefixes h3, .additional h3 {
+    font-family: "Prosto One", serif;
+    color: #fff;
+}
+
+.regions p, .prefixes p, .additional p {
+    margin: 5px 0 0 0;
+    color: #7b7d95;
+}
+
+.prefix-value {
+    color: #ffc107;
+    font-weight: bold;
+}
+
+.buy-button {
+    margin-top: 20px;
+    left: 10px;
+    padding: 12px 20px;
+    background: linear-gradient(135deg, #8a2be2, #ff00ff);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.buy-button:hover {
+    background: linear-gradient(135deg, #6a0dad, #d600d6);
+}
+
+
+/* Footer Styles */
+
+.footer {
+    margin-top: 50px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    background-color: #c1c1c1;
+    text-align: center;
+}

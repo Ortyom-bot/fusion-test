@@ -1,18 +1,14 @@
 /* Stalinist One; Prosto One */
 @import url("https://fonts.googleapis.com/css2?family=Prosto+One&family=Stalinist+One&display=swap");
 
-*{
-    margin: 0;/*обнуление отступов*/
-    padding: 0;/*обнуление полей*/
-    box-sizing: border-box;/*метод расчета размеров бокса*/
-}
-
 body {
     background-color: #1a1b26;
     display: flex;/*флексбокс сетка*/
     flex-direction: column;/*направление главной оси*/
     justify-content: flex-end;/*элементы в конце контейнера*/
     min-height: 100vh;
+    margin: 0;
+    padding: 0;
 }
 
 /* Header Styles */
@@ -458,6 +454,7 @@ main {
 /* Footer Styles */
 
 footer {
+    box-sizing: border-box;
     font-family: "Prosto One", serif;
     position: relative;/*относительное позиционирование*/
     width: 100vw;/*на всю ширину*/

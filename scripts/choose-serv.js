@@ -19,6 +19,8 @@ document.querySelectorAll(".donate-choose-nav a").forEach((link) => {
   });
 });
 
+
+
 document.addEventListener("DOMContentLoaded", function () {
   const previewDiv = document.getElementById("preview-content");
   const privilegeItems = document.querySelectorAll(".privilege-item");
@@ -123,9 +125,12 @@ document.addEventListener("DOMContentLoaded", function () {
                   </div>
               </div>
               <div class="donate-details">
-                  <div class="commands">
-                      <h3>КОМАНДЫ</h3>
-                      <ul>
+                    <div class="commands">
+                        <div class="commads-div">
+                            <img src="../public/images/script.png" class="img-com">
+                            <h3>КОМАНДЫ</h3>
+                        </div>
+                        <ul>
                           ${donation.commands
                             .map(
                               (cmd) => `
@@ -134,25 +139,34 @@ document.addEventListener("DOMContentLoaded", function () {
                             )
                             .join("")}
                       </ul>
-                  </div>
-                  <div class="regions-prefixes">
-                      <div class="regions">
-                          <h3>РЕГИОНЫ</h3>
-                          <p>${donation.regions.join(", ")}</p>
-                      </div>
-                      <div class="prefixes">
-                          <h3>ПРЕФИКС</h3>
-                          <p class="prefix-value">${donation.prefixes.join(
-                            ", "
-                          )}</p>
-                      </div>
-                  </div>
-                  <div class="additional">
-                      <h3>СОДЕРЖИМОЕ</h3>
-                      <p>${donation.additional.join(", ")}</p>
-                  </div>
-                <button class="buy-button" onclick="buyDonation('${donationId}')">КУПИТЬ ЗА ${donation.price}</button>
-              </div>
+                    </div>
+                    <div class="regions-prefixes">
+                        <div class="regions">
+                            <div class="commads-div">
+                                <img src="../public/images/pointer.png" class="img-com">
+                                <h3>РЕГИОНЫ</h3>
+                            </div>
+                            <p>${donation.regions.join(", ")}</p>
+                        </div>
+                        <div class="prefixes">
+                            <div class="commads-div">
+                                <img src="../public/images/prefix.png" class="img-com">
+                                <h3>ПРЕФИКС</h3>
+                            </div>
+                            <p>${donation.prefixes.join(", ")}</p>
+                        </div>
+                    </div>
+                    <div class="additional">
+                        <div class="commads-div">
+                            <img src="../public/images/add.png" class="img-com">
+                            <h3>ДОП. ВОЗМОЖНОСТИ</h3>
+                        </div>
+                        <p>${donation.additional.join(", ")}</p>
+                    </div>
+                    <button class="buy-button" onclick="buyDonation('${donationId}')">КУПИТЬ ЗА ${
+        donation.price
+      }</button>
+                </div>
           `;
     }
   }
